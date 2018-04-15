@@ -1,0 +1,2 @@
+# server-naqdax
+naqdax server
