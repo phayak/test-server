@@ -13,7 +13,7 @@ mongoose.Promise = global.Promise;
 if (process.env.NODE_ENV === 'test') {
   mongoose.connect('mongodb://localhost/socialTester');
 } else {
-  mongoose.connect('mongodb://localhost/socialrun');
+  mongoose.connect('mongodb://socialnaq:atcool1150@ds231589.mlab.com:31589/social');
 }
 // Middlewares
 // Middlewares moved morgan into if for clear tests
