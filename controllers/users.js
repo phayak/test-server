@@ -39,8 +39,10 @@ module.exports = {
 
   signIn: async (req, res, next) => {
     // Generate token
+    // const foundUser = await User.findOne({ "local.email": email });
+    const dataAuth = req.user;
     const token = signToken(req.user);
-    res.status(200).json({ token });
+    res.status(200).json({ token,dataAuth });
   },
 
   googleOAuth: async (req, res, next) => {
