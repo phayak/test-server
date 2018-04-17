@@ -30,7 +30,7 @@ module.exports = function(app) {
       res.setHeader('Access-Control-Allow-Credentials', true);
       next();
    });
-   app.route('/singup')
+   app.route('/signup')
    .post(validateBody(schemas.authSchema), UsersController.signUp);
    app.route('/signin')
    .post(validateBody(schemas.authSchema), passportSignIn, UsersController.signIn);
@@ -129,7 +129,6 @@ module.exports = function(app) {
          if(err) {
             res.send(err);
          }
-         
          res.json(post);
       })
    });
